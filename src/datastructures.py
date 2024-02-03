@@ -45,12 +45,12 @@ class FamilyStructure:
         # fill this method and update the return
         self._members.append(member)
 
-    def delete_member(self, id):
-        # fill this method and update the return
-        for indice, miembro in enumerate(self._members):
-            if int(id) == miembro["id"]:
-                self._members.pop(indice)
-        return self._members        
+    def delete_member(self, member_id):
+        for index, member in enumerate(self._members):
+            if int(member_id) == member["id"]:
+                deleted_member = self._members.pop(index)
+                return deleted_member
+        return None  # Return None if the member with the given ID is not found
 
     def get_member(self, id):
         # fill this method and update the return

@@ -79,7 +79,8 @@ def delete_member(id):
         return jsonify(response_body), 200
     else:
         response_body = {"message": "Member not found"}
-        return jsonify(response_body), 405
+        return jsonify(response_body), 404
+    
     
 
 
